@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+</head>
+<body>
+  <div id="vis"></div>
+  <script type="module">
+    import { importWithMap } from "https://unpkg.com/dynamic-importmap@0.1.0";
+    let importMap = {"imports": {"react": "https://esm.sh/react@18", "react-dom": "https://esm.sh/react-dom@18", "pixi": "https://esm.sh/pixi.js@6?bundle", "higlass": "https://esm.sh/higlass@1.13?external=react,react-dom,pixi&bundle", "gosling.js": "https://esm.sh/gosling.js@1.0.2?external=react,react-dom,pixi,higlass&bundle"}};
+    let gosling = await importWithMap("gosling.js", importMap);
+    let el = document.getElementById('vis');
+    let spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "separator": "\t", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleRight", "height": 500, "size": {"value": 10}, "width": 500, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromEnd", "type": "genomic"}}]};
+    let opt = {"padding": 0, "theme": null};
+    gosling.embed(el, spec, opt).catch((err) => {
+      el.innerHTML = `    <div class="error">
+        <p>JavaScript Error: ${error.message}</p>
+        <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+    </div>`;
+      throw error;
+    });
+  </script>
+</body>
+</html>
