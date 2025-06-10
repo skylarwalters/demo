@@ -1,0 +1,31 @@
+{
+  "tracks": [
+    {
+      "color": {
+        "value": "lightblue"
+      },
+      "data": {
+        "chromosomeField": "chrom",
+        "genomicFields": [
+          "chromStart",
+          "chromEnd"
+        ],
+        "headerNames": [
+          "chrom",
+          "chromStart",
+          "chromEnd",
+          "name",
+          "stain"
+        ],
+        "separator": "\t",
+        "type": "csv",
+        "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed"
+      },
+      "mark": "point",
+      "x": {
+        "field": "chromStart",
+        "type": "genomic"
+      }
+    }
+  ]
+}
