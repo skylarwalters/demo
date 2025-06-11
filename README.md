@@ -1,1 +1,242 @@
 This contains all of my gos demos and the notebook I used to create them.
+
+{
+{
+  "arrangement": "vertical",
+  "subtitle": "Drag the brush to get a detailed view",
+  "title": "Recreation of Example Visual",
+  "views": [
+    {
+      "arrangement": "horizontal",
+      "spacing": 40,
+      "views": [
+        {
+          "alignment": "overlay",
+          "centerRadius": 0.4,
+          "height": 130,
+          "layout": "circular",
+          "tracks": [
+            {
+              "color": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "data": {
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "column": "position",
+                "row": "sample",
+                "type": "multivec",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "value": "peak"
+              },
+              "layout": "circular",
+              "mark": "bar",
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "static": true,
+              "x": {
+                "domain": {
+                  "chromosome": "chr1"
+                },
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              }
+            },
+            {
+              "color": {
+                "value": "steelblue"
+              },
+              "data": {
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "column": "position",
+                "row": "sample",
+                "type": "multivec",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "value": "peak"
+              },
+              "mark": "brush",
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "x": {
+                "field": "start",
+                "linkingId": "brushId",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              }
+            }
+          ],
+          "width": 250
+        },
+        {
+          "alignment": "overlay",
+          "height": 200,
+          "tracks": [
+            {
+              "color": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "data": {
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "column": "position",
+                "row": "sample",
+                "type": "multivec",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "value": "peak"
+              },
+              "layout": "linear",
+              "mark": "bar",
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "static": true,
+              "x": {
+                "domain": {
+                  "chromosome": "chr1"
+                },
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              }
+            },
+            {
+              "color": {
+                "value": "steelblue"
+              },
+              "data": {
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "column": "position",
+                "row": "sample",
+                "type": "multivec",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "value": "peak"
+              },
+              "mark": "brush",
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "x": {
+                "field": "start",
+                "linkingId": "brushId",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              }
+            }
+          ],
+          "width": 400
+        }
+      ]
+    },
+    {
+      "tracks": [
+        {
+          "color": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "data": {
+            "categories": [
+              "sample 1",
+              "sample 2",
+              "sample 3",
+              "sample 4"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+            "value": "peak"
+          },
+          "height": 200,
+          "mark": "bar",
+          "row": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "style": {
+            "background": "steelblue",
+            "backgroundOpacity": 0.2
+          },
+          "title": "Detailed View",
+          "width": 690,
+          "x": {
+            "domain": {
+              "chromosome": "chr1",
+              "interval": [
+                160000000,
+                200000000
+              ]
+            },
+            "field": "start",
+            "linkingId": "brushId",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        }
+      ]
+    }
+  ]
+}
+}
