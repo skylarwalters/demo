@@ -13,6 +13,7 @@
       },
       "height": 100,
       "mark": "line",
+      "title": "",
       "x": {
         "field": "position",
         "type": "genomic"
@@ -35,6 +36,7 @@
       },
       "height": 100,
       "mark": "point",
+      "title": "",
       "x": {
         "field": "position",
         "type": "genomic"

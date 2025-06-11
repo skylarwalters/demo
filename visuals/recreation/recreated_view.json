@@ -1,18 +1,21 @@
 {
   "arrangement": "vertical",
+  "subtitle": "Drag the brush to get a detailed view",
   "title": "Recreation of Example Visual",
   "views": [
     {
       "arrangement": "horizontal",
+      "spacing": 40,
       "views": [
         {
           "alignment": "overlay",
+          "centerRadius": 0.4,
+          "height": 130,
           "layout": "circular",
           "tracks": [
             {
               "color": {
                 "field": "sample",
-                "legend": true,
                 "type": "nominal"
               },
               "data": {
@@ -87,15 +90,16 @@
                 "type": "quantitative"
               }
             }
-          ]
+          ],
+          "width": 250
         },
         {
           "alignment": "overlay",
+          "height": 200,
           "tracks": [
             {
               "color": {
                 "field": "sample",
-                "legend": true,
                 "type": "nominal"
               },
               "data": {
@@ -111,7 +115,7 @@
                 "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
                 "value": "peak"
               },
-              "height": 400,
+              "layout": "linear",
               "mark": "bar",
               "row": {
                 "field": "sample",
@@ -170,7 +174,8 @@
                 "type": "quantitative"
               }
             }
-          ]
+          ],
+          "width": 400
         }
       ]
     },
@@ -179,7 +184,6 @@
         {
           "color": {
             "field": "sample",
-            "legend": true,
             "type": "nominal"
           },
           "data": {
@@ -195,7 +199,7 @@
             "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
             "value": "peak"
           },
-          "height": 300,
+          "height": 200,
           "mark": "bar",
           "row": {
             "field": "sample",
@@ -206,13 +210,13 @@
             "backgroundOpacity": 0.2
           },
           "title": "Detailed View",
-          "width": 1000,
+          "width": 690,
           "x": {
             "domain": {
               "chromosome": "chr1",
               "interval": [
-                0,
-                20000000
+                160000000,
+                200000000
               ]
             },
             "field": "start",
