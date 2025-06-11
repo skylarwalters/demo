@@ -1,0 +1,100 @@
+{
+  "alignment": "overlay",
+  "tracks": [
+    {
+      "color": {
+        "value": "#2A9D8F"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 80,
+      "mark": "bar",
+      "title": "ExcitatoryNeurons",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "right",
+        "field": "peak",
+        "type": "quantitative"
+      }
+    },
+    {
+      "color": {
+        "value": "#8AB17D"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 80,
+      "mark": "bar",
+      "title": "InhibitoryNeurons",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "right",
+        "field": "peak",
+        "type": "quantitative"
+      }
+    },
+    {
+      "color": {
+        "value": "#E9C46A"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 80,
+      "mark": "bar",
+      "title": "Microglia",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "right",
+        "field": "peak",
+        "type": "quantitative"
+      }
+    },
+    {
+      "color": {
+        "value": "#F4A261"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 80,
+      "mark": "bar",
+      "title": "Astrocytes",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "right",
+        "field": "peak",
+        "type": "quantitative"
+      }
+    }
+  ],
+  "xDomain": {
+    "chromosome": "1"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "alignment": "overlay",
+  "tracks": [
+    {
+      "color": {
+        "value": "black"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 100,
+      "mark": "line",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "field": "peak",
+        "type": "quantitative"
+      }
+    },
+    {
+      "color": {
+        "field": "peak",
+        "type": "quantitative"
+      },
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 100,
+      "mark": "point",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "field": "peak",
+        "type": "quantitative"
+      }
+    }
+  ]
+}

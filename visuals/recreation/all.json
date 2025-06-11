@@ -1,0 +1,122 @@
+{
+  "arrangement": "vertical",
+  "views": [
+    {
+      "layout": "linear",
+      "static": true,
+      "tracks": [
+        {
+          "color": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "data": {
+            "categories": [
+              "sample 1",
+              "sample 2",
+              "sample 3",
+              "sample 4"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+            "value": "peak"
+          },
+          "mark": "bar",
+          "row": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "x": {
+            "axis": "bottom",
+            "domain": {
+              "chromosome": "7",
+              "interval": [
+                77700000,
+                81000000
+              ]
+            },
+            "field": "start",
+            "linkingId": "sameId",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "overlay",
+      "tracks": [
+        {
+          "color": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "data": {
+            "categories": [
+              "sample 1",
+              "sample 2",
+              "sample 3",
+              "sample 4"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+            "value": "peak"
+          },
+          "mark": "bar",
+          "row": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "x": {
+            "field": "position",
+            "linkingId": "sameId",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "steelblue"
+          },
+          "data": {
+            "categories": [
+              "sample 1",
+              "sample 2",
+              "sample 3",
+              "sample 4"
+            ],
+            "column": "position",
+            "row": "sample",
+            "type": "multivec",
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+            "value": "peak"
+          },
+          "mark": "brush",
+          "row": {
+            "field": "sample",
+            "type": "nominal"
+          },
+          "x": {
+            "field": "start",
+            "linkingId": "sameId",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        }
+      ]
+    }
+  ]
+}

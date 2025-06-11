@@ -1,0 +1,24 @@
+{
+  "tracks": [
+    {
+      "data": {
+        "column": "position",
+        "type": "bigwig",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw",
+        "value": "peak"
+      },
+      "height": 80,
+      "mark": "bar",
+      "title": "Iterative view of plot 2",
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "y": {
+        "axis": "right",
+        "field": "peak",
+        "type": "quantitative"
+      }
+    }
+  ]
+}
