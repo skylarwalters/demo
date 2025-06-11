@@ -1,6 +1,6 @@
 This contains all of my gos demos and the notebook I used to create them.
 
-{
+'''
 {
   "arrangement": "vertical",
   "subtitle": "Drag the brush to get a detailed view",
@@ -239,4 +239,4 @@ This contains all of my gos demos and the notebook I used to create them.
     }
   ]
 }
-}
+'''
