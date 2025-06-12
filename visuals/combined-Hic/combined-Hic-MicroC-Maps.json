@@ -1,0 +1,934 @@
+{
+  "arrangement": "horizontal",
+  "linkingId": "-",
+  "spacing": 1,
+  "title": "Matrix Visualization Recreation",
+  "views": [
+    {
+      "alignment": "stack",
+      "orientation": "vertical",
+      "tracks": [
+        {
+          "color": {
+            "value": "darkgreen"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+            "value": "peak"
+          },
+          "height": 375,
+          "mark": "bar",
+          "title": "HFFc6_H3K4me3",
+          "width": 25.0,
+          "x": {
+            "axis": "top",
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "color": {
+            "value": "#E79F00"
+          },
+          "data": {
+            "column": "position",
+            "type": "bigwig",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+            "value": "peak"
+          },
+          "height": 375,
+          "mark": "bar",
+          "title": "HFFc6_ATAC",
+          "width": 25.0,
+          "x": {
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "axis": "none",
+            "field": "peak",
+            "type": "quantitative"
+          }
+        },
+        {
+          "alignment": "overlay",
+          "height": 375,
+          "tracks": [
+            {
+              "color": {
+                "value": "#0072B2"
+              },
+              "data": {
+                "column": "position",
+                "type": "bigwig",
+                "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                "value": "peak"
+              },
+              "mark": "bar",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "axis": "none",
+                "field": "peak",
+                "type": "quantitative"
+              }
+            },
+            {
+              "color": {
+                "value": "#CB7AA7"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleRight",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 13
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "backgroundOpacity": 0
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              }
+            },
+            {
+              "color": {
+                "value": "#029F73"
+              },
+              "data": {
+                "genomicFields": [
+                  {
+                    "index": 1,
+                    "name": "start"
+                  },
+                  {
+                    "index": 2,
+                    "name": "end"
+                  }
+                ],
+                "type": "beddb",
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                "valueFields": [
+                  {
+                    "index": 5,
+                    "name": "strand",
+                    "type": "nominal"
+                  },
+                  {
+                    "index": 3,
+                    "name": "name",
+                    "type": "nominal"
+                  }
+                ]
+              },
+              "dataTransform": [
+                {
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ],
+                  "type": "filter"
+                }
+              ],
+              "mark": "triangleLeft",
+              "row": {
+                "domain": [
+                  "+",
+                  "-"
+                ],
+                "field": "strand",
+                "type": "nominal"
+              },
+              "size": {
+                "value": 13
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "style": {
+                "backgroundOpacity": 0
+              },
+              "title": "HFFC6_CTCF",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              }
+            }
+          ],
+          "width": 25.0
+        }
+      ],
+      "yOffset": 134.89208633093526
+    },
+    {
+      "spacing": 30,
+      "views": [
+        {
+          "arrangement": "vertical",
+          "spacing": 0,
+          "views": [
+            {
+              "alignment": "stack",
+              "tracks": [
+                {
+                  "color": {
+                    "value": "darkgreen"
+                  },
+                  "data": {
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_H3K4me3",
+                  "width": 375,
+                  "x": {
+                    "axis": "top",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "color": {
+                    "value": "#E79F00"
+                  },
+                  "data": {
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_ATAC",
+                  "width": 375,
+                  "x": {
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "alignment": "overlay",
+                  "height": 25.0,
+                  "tracks": [
+                    {
+                      "color": {
+                        "value": "#0072B2"
+                      },
+                      "data": {
+                        "column": "position",
+                        "type": "bigwig",
+                        "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                        "value": "peak"
+                      },
+                      "mark": "bar",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      },
+                      "xe": {
+                        "field": "end",
+                        "type": "genomic"
+                      },
+                      "y": {
+                        "axis": "none",
+                        "field": "peak",
+                        "type": "quantitative"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#CB7AA7"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "+"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleRight",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#029F73"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "-"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleLeft",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "title": "HFFC6_CTCF",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    }
+                  ],
+                  "width": 375
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "value",
+                    "range": "warm",
+                    "type": "quantitative"
+                  },
+                  "data": {
+                    "type": "matrix",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38"
+                  },
+                  "height": 375,
+                  "mark": "rect",
+                  "title": "HFFc6_Micro-C",
+                  "width": 375,
+                  "x": {
+                    "field": "xs",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "xe",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "field": "ys",
+                    "type": "genomic"
+                  },
+                  "ye": {
+                    "field": "ye",
+                    "type": "genomic"
+                  }
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "category",
+                    "range": [
+                      "#FF0000",
+                      "#FF4500",
+                      "#32CD32",
+                      "#008000",
+                      "#006400",
+                      "#C2E105",
+                      "#FFFF00",
+                      "#66CDAA",
+                      "#8A91D0",
+                      "#CD5C5C",
+                      "#E9967A",
+                      "#BDB76B",
+                      "#808080",
+                      "#C0C0C0",
+                      "gray"
+                    ],
+                    "type": "nominal"
+                  },
+                  "data": {
+                    "categories": [
+                      "Active TSS",
+                      "Flanking Active TSS",
+                      "Transcr at gene 5\\' and 3\\'",
+                      "Strong transcription",
+                      "Weak transcription",
+                      "Genic enhancers",
+                      "Enhancers",
+                      "ZNF genes & repeats",
+                      "Heterochromatin",
+                      "Bivalent/Poised TSS",
+                      "Flanking Bivalent TSS/Enh",
+                      "Bivalent Enhancer",
+                      "Repressed PolyComb",
+                      "Weak Repressed PolyComb",
+                      "Quiescent/Low"
+                    ],
+                    "column": "position",
+                    "row": "category",
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38",
+                    "value": "value"
+                  },
+                  "dataTransform": [
+                    {
+                      "field": "value",
+                      "inRange": [
+                        0,
+                        999999
+                      ],
+                      "type": "filter"
+                    }
+                  ],
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "Epilogos (hg38)",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "value",
+                    "type": "quantitative"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "arrangement": "vertical",
+          "spacing": 0,
+          "views": [
+            {
+              "alignment": "stack",
+              "tracks": [
+                {
+                  "color": {
+                    "value": "darkgreen"
+                  },
+                  "data": {
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_H3K4me3.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_H3K4me3",
+                  "width": 375,
+                  "x": {
+                    "axis": "top",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "color": {
+                    "value": "#E79F00"
+                  },
+                  "data": {
+                    "column": "position",
+                    "type": "bigwig",
+                    "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFc6_Atacseq.mRp.clN.bigWig",
+                    "value": "peak"
+                  },
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "HFFc6_ATAC",
+                  "width": 375,
+                  "x": {
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "peak",
+                    "type": "quantitative"
+                  }
+                },
+                {
+                  "alignment": "overlay",
+                  "height": 25.0,
+                  "tracks": [
+                    {
+                      "color": {
+                        "value": "#0072B2"
+                      },
+                      "data": {
+                        "column": "position",
+                        "type": "bigwig",
+                        "url": "https://s3.amazonaws.com/gosling-lang.org/data/HFFC6_CTCF.mRp.clN.bigWig",
+                        "value": "peak"
+                      },
+                      "mark": "bar",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      },
+                      "xe": {
+                        "field": "end",
+                        "type": "genomic"
+                      },
+                      "y": {
+                        "axis": "none",
+                        "field": "peak",
+                        "type": "quantitative"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#CB7AA7"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "+"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleRight",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    },
+                    {
+                      "color": {
+                        "value": "#029F73"
+                      },
+                      "data": {
+                        "genomicFields": [
+                          {
+                            "index": 1,
+                            "name": "start"
+                          },
+                          {
+                            "index": 2,
+                            "name": "end"
+                          }
+                        ],
+                        "type": "beddb",
+                        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                        "valueFields": [
+                          {
+                            "index": 5,
+                            "name": "strand",
+                            "type": "nominal"
+                          },
+                          {
+                            "index": 3,
+                            "name": "name",
+                            "type": "nominal"
+                          }
+                        ]
+                      },
+                      "dataTransform": [
+                        {
+                          "field": "strand",
+                          "oneOf": [
+                            "-"
+                          ],
+                          "type": "filter"
+                        }
+                      ],
+                      "mark": "triangleLeft",
+                      "row": {
+                        "domain": [
+                          "+",
+                          "-"
+                        ],
+                        "field": "strand",
+                        "type": "nominal"
+                      },
+                      "size": {
+                        "value": 13
+                      },
+                      "stroke": {
+                        "value": "white"
+                      },
+                      "strokeWidth": {
+                        "value": 1
+                      },
+                      "style": {
+                        "backgroundOpacity": 0
+                      },
+                      "title": "HFFC6_CTCF",
+                      "x": {
+                        "field": "start",
+                        "type": "genomic"
+                      }
+                    }
+                  ],
+                  "width": 375
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "value",
+                    "range": "warm",
+                    "type": "quantitative"
+                  },
+                  "data": {
+                    "type": "matrix",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-hic-hg38"
+                  },
+                  "height": 375,
+                  "mark": "rect",
+                  "title": "HFFc6_Hi-C",
+                  "width": 375,
+                  "x": {
+                    "field": "xs",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "xe",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "field": "ys",
+                    "type": "genomic"
+                  },
+                  "ye": {
+                    "field": "ye",
+                    "type": "genomic"
+                  }
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "color": {
+                    "field": "category",
+                    "range": [
+                      "#FF0000",
+                      "#FF4500",
+                      "#32CD32",
+                      "#008000",
+                      "#006400",
+                      "#C2E105",
+                      "#FFFF00",
+                      "#66CDAA",
+                      "#8A91D0",
+                      "#CD5C5C",
+                      "#E9967A",
+                      "#BDB76B",
+                      "#808080",
+                      "#C0C0C0",
+                      "gray"
+                    ],
+                    "type": "nominal"
+                  },
+                  "data": {
+                    "categories": [
+                      "Active TSS",
+                      "Flanking Active TSS",
+                      "Transcr at gene 5\\' and 3\\'",
+                      "Strong transcription",
+                      "Weak transcription",
+                      "Genic enhancers",
+                      "Enhancers",
+                      "ZNF genes & repeats",
+                      "Heterochromatin",
+                      "Bivalent/Poised TSS",
+                      "Flanking Bivalent TSS/Enh",
+                      "Bivalent Enhancer",
+                      "Repressed PolyComb",
+                      "Weak Repressed PolyComb",
+                      "Quiescent/Low"
+                    ],
+                    "column": "position",
+                    "row": "category",
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38",
+                    "value": "value"
+                  },
+                  "dataTransform": [
+                    {
+                      "field": "value",
+                      "inRange": [
+                        0,
+                        999999
+                      ],
+                      "type": "filter"
+                    }
+                  ],
+                  "height": 25.0,
+                  "mark": "bar",
+                  "title": "Epilogos (hg38)",
+                  "width": 375,
+                  "x": {
+                    "axis": "none",
+                    "field": "start",
+                    "type": "genomic"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "axis": "none",
+                    "field": "value",
+                    "type": "quantitative"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "xDomain": {
+    "chromosome": "chr7",
+    "interval": [
+      77700000,
+      81000000
+    ]
+  }
+}
